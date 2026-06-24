@@ -65,7 +65,7 @@
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="img/my_logo.jpg" alt="logo"width="80"
-              <div class="bname">Sar<span>ab</span></div>
+              <div class="bname">Greatness<span>foods</span></div>
               <div class="bsub">Fast Food & Restaurant</div>
             </div>
           </div>
@@ -108,7 +108,7 @@
             <button id="navSearchBtn" title="Search">
               <i class="fas fa-search"></i>
             </button>
-            <a href="#menu" class="nav-link nav-cta"
+            <a href="https://wa.link/slphjb" class="nav-link nav-cta"
               ><i class="fas fa-shopping-bag me-1"></i>Order Now</a
             >
           </div>
@@ -176,6 +176,8 @@
          ============================================================ -->
     <section id="hero">
       <div class="hs hs1"></div>
+    
+       
 
             <div class="hbgtxt">FOOD</div>
       <div class="container">
@@ -197,6 +199,7 @@
               <a href="#menu" class="btn-red"
                 ><i class="fas fa-utensils"></i>Explore Menu</a
               >
+
               <!-- FIX 2: Magnific popup video trigger -->
               <a
                 href="https://www.youtube.com/watch?v=RXv_uIN6e-Y"
@@ -231,7 +234,7 @@
           <div class="col-lg-6">
             <div style="position: relative; text-align: center">
               <div class="hcircle">
-                <img src="img/rice_stew.jpg" alt="rice" />
+                <img src="img/platter.jpeg" alt="">
               </div>
               <div class="fcard fc1">
                 <div class="fcoi r"><i class="fas fa-fire"></i></div>
@@ -309,7 +312,7 @@
             data-aos-delay="0"
           >
             <div class="catcard active" data-filter="all">
-              <img class="catimg" src="img/category/1.jpg" alt="" />
+               <img src="img/jollof rice.jpeg" alt="stew">
               <div class="catnm">All Items</div>
               <div class="catct">99 items</div>
             </div>
@@ -320,8 +323,8 @@
             data-aos-delay="70"
           >
             <div class="catcard" data-filter="burgers">
-              <img class="catimg" src="img/category/2.jpg" alt="" />
-              <div class="catnm">Burgers</div>
+              <img class="catimg" src="img/ewo agoyin.jpeg" alt="" />
+              <div class="catnm">ewa agoyin with bread</div>
               <div class="catct">24 items</div>
             </div>
           </div>
@@ -331,8 +334,8 @@
             data-aos-delay="140"
           >
             <div class="catcard" data-filter="pizza">
-              <img class="catimg" src="img/category/3.jpg" alt="" />
-              <div class="catnm">Pizza</div>
+              <img class="catimg" src="img/amala ewede.jpeg" alt="" />
+              <div class="catnm">amala&ewedu</div>
               <div class="catct">18 items</div>
             </div>
           </div>
@@ -342,8 +345,8 @@
             data-aos-delay="210"
           >
             <div class="catcard" data-filter="chicken">
-              <img class="catimg" src="img/category/4.jpg" alt="" />
-              <div class="catnm">Fried Chicken</div>
+              <img class="catimg" src="img/turkey.jpeg" alt="" />
+              <div class="catnm">peppered turkey</div>
               <div class="catct">15 items</div>
             </div>
           </div>
@@ -353,8 +356,8 @@
             data-aos-delay="280"
           >
             <div class="catcard" data-filter="wraps">
-              <img class="catimg" src="img/category/5.jpg" alt="" />
-              <div class="catnm">Wraps</div>
+              <img class="catimg" src="img/rice.jpeg" alt="" />
+              <div class="catnm">akara&pap</div>
               <div class="catct">12 items</div>
             </div>
           </div>
@@ -364,8 +367,8 @@
             data-aos-delay="350"
           >
             <div class="catcard" data-filter="desserts">
-              <img class="catimg" src="img/category/6.jpg" alt="" />
-              <div class="catnm">Desserts</div>
+              <img class="catimg" src="img/food.jpeg" alt="" />
+              <div class="catnm">rice&stew</div>
               <div class="catct">20 items</div>
             </div>
           </div>
@@ -1827,13 +1830,14 @@
               <div class="row g-3">
                 <div class="col-sm-6">
                   <label class="flbl">Your Name *</label
-                  ><input type="text" class="fctrl" placeholder="John Doe" />
+                  ><input type="text" id="name" class="fctrl" placeholder="John Doe" />
                 </div>
                 <div class="col-sm-6">
                   <label class="flbl">Email Address *</label
                   ><input
                     type="email"
                     class="fctrl"
+                    id="email"
                     placeholder="you@email.com"
                   />
                 </div>
@@ -1842,6 +1846,7 @@
                   ><input
                     type="tel"
                     class="fctrl"
+                    id="phone-number"
                     placeholder="+1 (800) 000-0000"
                   />
                 </div>
@@ -1860,11 +1865,12 @@
                   ><textarea
                     class="fctrl"
                     rows="5"
+                    id="message"
                     placeholder="Write your message here..."
                   ></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn-red" id="ctcBtn">
+                  <button class="btn-red" id="contactForm">
                     <i class="fas fa-paper-plane"></i>Send Message
                   </button>
                 </div>
@@ -2029,4 +2035,31 @@
     <!-- Main js -->
     <script src="js/main.js"></script>
   </body>
+  <script>
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const tel = document.getElementById("phone-number").value;
+    const message = document.getElementById("message").value;
+
+    // Replace with your WhatsApp number
+    const phoneNumber = "2347018124220";
+
+    const whatsappMessage =
+        `Hello, my name is ${name}%0A` +
+        `Email: ${email}%0A%0A` +
+        `Phone number: ${tel}%0A%0A` +
+        `Message:%0A${message}`;
+
+    const whatsappURL =
+        `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    window.open(whatsappURL, "_blank");
+    console.log(whatsappMessage)
+    });
+</script>
 </html>
